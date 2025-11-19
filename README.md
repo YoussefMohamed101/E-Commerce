@@ -182,12 +182,12 @@ erDiagram
     Product ||--o{ Order_Details : appears_in
 
     Category {
-        int category_id PK
-        string category_name
+        int id PK
+        string name
     }
 
     Product {
-        int product_id PK
+        int id PK
         int category_id FK
         string ProductName
         string description
@@ -196,22 +196,22 @@ erDiagram
     }
 
     Customer {
-        int customer_id PK
-        string firstName
-        string lastName
+        int id PK
+        string first_name
+        string last_name
         string email
         string password
     }
 
     Orders {
-        int order_id PK
+        int id PK
         int customer_id FK
         datetime orderDate
         decimal total_amount
     }
 
     Order_Details {
-        int orderDetailId PK
+        int id PK
         int orderId FK
         int productId FK
         int quantity
